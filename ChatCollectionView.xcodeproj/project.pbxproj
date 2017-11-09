@@ -12,6 +12,15 @@
 		F5710C031FB460E700430F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5710C011FB460E700430F44 /* Main.storyboard */; };
 		F5710C051FB460E700430F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5710C041FB460E700430F44 /* Assets.xcassets */; };
 		F5710C081FB460E700430F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5710C061FB460E700430F44 /* LaunchScreen.storyboard */; };
+		F5710C121FB461A600430F44 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C101FB461A600430F44 /* Message.swift */; };
+		F5710C1D1FB4620000430F44 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C161FB4620000430F44 /* ChatMessageCell.swift */; };
+		F5710C1E1FB4620000430F44 /* ChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5710C171FB4620000430F44 /* ChatMessageCell.xib */; };
+		F5710C1F1FB4620000430F44 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C181FB4620000430F44 /* ChatCollectionView.swift */; };
+		F5710C201FB4620000430F44 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C1A1FB4620000430F44 /* ChatInputView.swift */; };
+		F5710C211FB4620000430F44 /* ChatInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5710C1B1FB4620000430F44 /* ChatInputView.xib */; };
+		F5710C221FB4620000430F44 /* ChatKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */; };
+		F5710C241FB4623100430F44 /* ChatMessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */; };
+		F5710C281FB4645B00430F44 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C271FB4645B00430F44 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		F5710C041FB460E700430F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5710C071FB460E700430F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5710C091FB460E700430F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5710C101FB461A600430F44 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F5710C161FB4620000430F44 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		F5710C171FB4620000430F44 /* ChatMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageCell.xib; sourceTree = "<group>"; };
+		F5710C181FB4620000430F44 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
+		F5710C1A1FB4620000430F44 /* ChatInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
+		F5710C1B1FB4620000430F44 /* ChatInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatInputView.xib; sourceTree = "<group>"; };
+		F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKeyboardManager.swift; sourceTree = "<group>"; };
+		F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageDataSource.swift; sourceTree = "<group>"; };
+		F5710C271FB4645B00430F44 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,47 @@
 		F5710BFC1FB460E700430F44 /* ChatCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				F5710C141FB4620000430F44 /* Chat */,
+				F5710C101FB461A600430F44 /* Message.swift */,
 				F5710BFD1FB460E700430F44 /* AppDelegate.swift */,
 				F5710BFF1FB460E700430F44 /* ViewController.swift */,
+				F5710C271FB4645B00430F44 /* Utils.swift */,
 				F5710C011FB460E700430F44 /* Main.storyboard */,
 				F5710C041FB460E700430F44 /* Assets.xcassets */,
 				F5710C061FB460E700430F44 /* LaunchScreen.storyboard */,
 				F5710C091FB460E700430F44 /* Info.plist */,
 			);
 			path = ChatCollectionView;
+			sourceTree = "<group>";
+		};
+		F5710C141FB4620000430F44 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F5710C191FB4620000430F44 /* Keyboard Input View */,
+				F5710C151FB4620000430F44 /* Chat Message Cell */,
+				F5710C181FB4620000430F44 /* ChatCollectionView.swift */,
+				F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */,
+				F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F5710C151FB4620000430F44 /* Chat Message Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F5710C161FB4620000430F44 /* ChatMessageCell.swift */,
+				F5710C171FB4620000430F44 /* ChatMessageCell.xib */,
+			);
+			path = "Chat Message Cell";
+			sourceTree = "<group>";
+		};
+		F5710C191FB4620000430F44 /* Keyboard Input View */ = {
+			isa = PBXGroup;
+			children = (
+				F5710C1A1FB4620000430F44 /* ChatInputView.swift */,
+				F5710C1B1FB4620000430F44 /* ChatInputView.xib */,
+			);
+			path = "Keyboard Input View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +174,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5710C211FB4620000430F44 /* ChatInputView.xib in Resources */,
 				F5710C081FB460E700430F44 /* LaunchScreen.storyboard in Resources */,
 				F5710C051FB460E700430F44 /* Assets.xcassets in Resources */,
+				F5710C1E1FB4620000430F44 /* ChatMessageCell.xib in Resources */,
 				F5710C031FB460E700430F44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5710C121FB461A600430F44 /* Message.swift in Sources */,
+				F5710C201FB4620000430F44 /* ChatInputView.swift in Sources */,
+				F5710C281FB4645B00430F44 /* Utils.swift in Sources */,
+				F5710C221FB4620000430F44 /* ChatKeyboardManager.swift in Sources */,
 				F5710C001FB460E700430F44 /* ViewController.swift in Sources */,
+				F5710C1F1FB4620000430F44 /* ChatCollectionView.swift in Sources */,
+				F5710C1D1FB4620000430F44 /* ChatMessageCell.swift in Sources */,
+				F5710C241FB4623100430F44 /* ChatMessageDataSource.swift in Sources */,
 				F5710BFE1FB460E700430F44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

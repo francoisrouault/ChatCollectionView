@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ChatCollectionView
 //
-//  Created by François Rouault on 09/11/2017.
+//  Created by François Rouault on 20/10/2017.
 //  Copyright © 2017 Cocorico Studio. All rights reserved.
 //
 
