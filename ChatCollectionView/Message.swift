@@ -12,8 +12,8 @@ import UIKit
 class Message: ChatMessageDataSource, CustomStringConvertible {
     
     enum From {
-        case platform1
-        case platform2
+        case platform1(String)
+        case platform2(String)
         case user
         
         var color: UIColor {
@@ -26,27 +26,32 @@ class Message: ChatMessageDataSource, CustomStringConvertible {
                 return UIColor.firekast
             }
         }
+        
+        var author: String {
+            switch self {
+            case .platform1(let author):
+                return author
+            case .platform2(let author):
+                return author
+            case .user:
+                return "Me"
+            }
+        }
     }
     
-    let message: String
-    let author: String
-    let createdAt: Date
+    var message: String
+    let from: From
     
     var text: String
     var backgroundColor: UIColor
     var buttons: [ChatButton]?
     var clickCallback: (() -> ())?
     
-    init(message: String, author: String, from: From, createdAt: Date, click: (() -> ())? = nil) {
-        self.author = author
+    init(message: String, from: From, click: (() -> ())? = nil) {
+        self.from = from
         self.message = message
-        self.createdAt = createdAt
         // ChatMessageDataSource
-        if from == .user {
-            self.text = String(format: "%@: %@", "Me", self.message)
-        } else {
-            self.text = String(format: "%@: %@", self.author, self.message)
-        }
+        self.text = String(format: "%@: %@", from.author, self.message)
         self.backgroundColor = from.color.withAlphaComponent(0.6)
         self.clickCallback = click
     }

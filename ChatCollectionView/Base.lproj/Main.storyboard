@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,12 +12,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloChatView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kHp-qY-hNI" customClass="ChatCollectionView" customModule="HelloChatView" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kHp-qY-hNI" customClass="ChatCollectionView" customModule="ChatCollectionView" customModuleProvider="target">
                                 <rect key="frame" x="16" y="107" width="343" height="520"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bAQ-6X-2Z5">
@@ -58,13 +58,6 @@
                                     <action selector="clickHideKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMf-ha-cXS"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-cI-CqA" userLabel="Input" customClass="ChatInputView" customModule="HelloChatView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="qW5-JA-7a9"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDb-UO-bvT">
                                 <rect key="frame" x="308" y="50" width="51" height="30"/>
                                 <state key="normal" title="Bottom"/>
@@ -78,13 +71,10 @@
                         <constraints>
                             <constraint firstItem="wSJ-rf-25Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1lE-0x-Hbu"/>
                             <constraint firstItem="wSJ-rf-25Y" firstAttribute="top" secondItem="0Jy-0i-4N7" secondAttribute="bottom" id="58E-ik-K5X"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cdq-cI-CqA" secondAttribute="bottom" id="9gg-vJ-raR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDb-UO-bvT" secondAttribute="trailing" constant="16" id="ESP-wd-7oV"/>
-                            <constraint firstItem="Cdq-cI-CqA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ea6-1g-rhc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IM8-KC-PeP" secondAttribute="trailing" constant="16" id="EbX-9M-o0b"/>
                             <constraint firstItem="kHp-qY-hNI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="KMq-IQ-juS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDb-UO-bvT" secondAttribute="trailing" constant="16" id="M8t-yQ-ecx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cdq-cI-CqA" secondAttribute="trailing" id="RjS-AS-uoS"/>
                             <constraint firstItem="IM8-KC-PeP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="THG-gB-baN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHp-qY-hNI" secondAttribute="trailing" constant="16" id="VKw-f2-Ka2"/>
                             <constraint firstItem="0Jy-0i-4N7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WEG-OG-9vP"/>
@@ -97,7 +87,6 @@
                     </view>
                     <connections>
                         <outlet property="buttonNewMessage" destination="IM8-KC-PeP" id="iCL-Sn-Gk7"/>
-                        <outlet property="chatInputView" destination="Cdq-cI-CqA" id="9eM-zJ-p8Y"/>
                         <outlet property="collectionView" destination="kHp-qY-hNI" id="AI0-xS-Y41"/>
                     </connections>
                 </viewController>

@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: ChatCollectionView!
     @IBOutlet weak var buttonNewMessage: UIButton!
-    @IBOutlet weak var constraintBottom: NSLayoutConstraint!
-    @IBOutlet weak var chatInputView: ChatInputView!
-   
-    var chatKeyboardManager: ChatKeyboardManager!
     
     func createMessageText() -> String {
         let choice = arc4random_uniform(UInt32(50-1)) % 50
@@ -36,25 +32,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        chatKeyboardManager = ChatKeyboardManager(chatInputView: chatInputView, collectionView: collectionView)
-        chatInputView.shouldShowSendButton = {
-            input in
-            return !input.isEmpty
-        }
-        chatInputView.delegate = {
-            view, input in
-            view.clearText()
-            let message = Message(message: input, author: "Me", from: .user, createdAt: Date()) {
-                print("'\(input)' cell clicked")
-            }
-            self.collectionView.reloadData(with: message)
-        }
     }
     
     @IBAction func clickNewMessage(_ sender: UIButton) {
         let text = createMessageText()
-        let from = randomInt(min: 0, max: 1) == 0 ? Message.From.platform1 : Message.From.platform2
-        let message = Message(message: text, author: "Mike", from: from, createdAt: Date()) {
+        let from = randomInt(min: 0, max: 1) == 0 ? Message.From.platform1("Mike") : Message.From.platform2("Jean")
+        let message = Message(message: text, from: from) {
             print("Cell clicked")
         }
         var buttons = [ChatButton]()
@@ -70,11 +53,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickShowKeyboard(_ sender: Any) {
-        chatKeyboardManager.show()
+        let inputView = TextInputView(frame: CGRect.zero)
+        inputView.show(in: self, over: collectionView)        
     }
     
     @IBAction func clickHideKeyboard(_ sender: Any) {
-        chatKeyboardManager.hide()
+        FloatingInputView.current?.hide()
     }
     
     @IBAction func clickGoBottom(_ sender: Any) {

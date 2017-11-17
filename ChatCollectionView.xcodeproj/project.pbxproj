@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5127EF81FBF376800FA1843 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127EF71FBF376800FA1843 /* TextInputView.swift */; };
 		F5710BFE1FB460E700430F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710BFD1FB460E700430F44 /* AppDelegate.swift */; };
 		F5710C001FB460E700430F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710BFF1FB460E700430F44 /* ViewController.swift */; };
 		F5710C031FB460E700430F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5710C011FB460E700430F44 /* Main.storyboard */; };
@@ -16,15 +17,15 @@
 		F5710C1D1FB4620000430F44 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C161FB4620000430F44 /* ChatMessageCell.swift */; };
 		F5710C1E1FB4620000430F44 /* ChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5710C171FB4620000430F44 /* ChatMessageCell.xib */; };
 		F5710C1F1FB4620000430F44 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C181FB4620000430F44 /* ChatCollectionView.swift */; };
-		F5710C201FB4620000430F44 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C1A1FB4620000430F44 /* ChatInputView.swift */; };
-		F5710C211FB4620000430F44 /* ChatInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5710C1B1FB4620000430F44 /* ChatInputView.xib */; };
-		F5710C221FB4620000430F44 /* ChatKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */; };
+		F5710C211FB4620000430F44 /* TextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5710C1B1FB4620000430F44 /* TextInputView.xib */; };
 		F5710C241FB4623100430F44 /* ChatMessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */; };
 		F5710C281FB4645B00430F44 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710C271FB4645B00430F44 /* Utils.swift */; };
 		F5710C311FB4925B00430F44 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F5710C2F1FB4925B00430F44 /* README.md */; };
+		F5E9712E1FB9F159006125F3 /* FloatingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9712D1FB9F159006125F3 /* FloatingInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5127EF71FBF376800FA1843 /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		F5710BFA1FB460E700430F44 /* ChatCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5710BFD1FB460E700430F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5710BFF1FB460E700430F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,12 +37,11 @@
 		F5710C161FB4620000430F44 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		F5710C171FB4620000430F44 /* ChatMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageCell.xib; sourceTree = "<group>"; };
 		F5710C181FB4620000430F44 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
-		F5710C1A1FB4620000430F44 /* ChatInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
-		F5710C1B1FB4620000430F44 /* ChatInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatInputView.xib; sourceTree = "<group>"; };
-		F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKeyboardManager.swift; sourceTree = "<group>"; };
+		F5710C1B1FB4620000430F44 /* TextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputView.xib; sourceTree = "<group>"; };
 		F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageDataSource.swift; sourceTree = "<group>"; };
 		F5710C271FB4645B00430F44 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F5710C2F1FB4925B00430F44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F5E9712D1FB9F159006125F3 /* FloatingInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5127EF61FBF2D5C00FA1843 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9712D1FB9F159006125F3 /* FloatingInputView.swift */,
+				F5710C191FB4620000430F44 /* TextView */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		F5710BF11FB460E700430F44 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +84,7 @@
 		F5710BFC1FB460E700430F44 /* ChatCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				F5127EF61FBF2D5C00FA1843 /* Input */,
 				F5710C141FB4620000430F44 /* Chat */,
 				F5710C101FB461A600430F44 /* Message.swift */,
 				F5710BFD1FB460E700430F44 /* AppDelegate.swift */,
@@ -91,11 +101,9 @@
 		F5710C141FB4620000430F44 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				F5710C191FB4620000430F44 /* Keyboard Input View */,
 				F5710C151FB4620000430F44 /* Chat Message Cell */,
 				F5710C181FB4620000430F44 /* ChatCollectionView.swift */,
 				F5710C231FB4623100430F44 /* ChatMessageDataSource.swift */,
-				F5710C1C1FB4620000430F44 /* ChatKeyboardManager.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -109,13 +117,13 @@
 			path = "Chat Message Cell";
 			sourceTree = "<group>";
 		};
-		F5710C191FB4620000430F44 /* Keyboard Input View */ = {
+		F5710C191FB4620000430F44 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
-				F5710C1A1FB4620000430F44 /* ChatInputView.swift */,
-				F5710C1B1FB4620000430F44 /* ChatInputView.xib */,
+				F5127EF71FBF376800FA1843 /* TextInputView.swift */,
+				F5710C1B1FB4620000430F44 /* TextInputView.xib */,
 			);
-			path = "Keyboard Input View";
+			path = TextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5710C311FB4925B00430F44 /* README.md in Resources */,
-				F5710C211FB4620000430F44 /* ChatInputView.xib in Resources */,
+				F5710C211FB4620000430F44 /* TextInputView.xib in Resources */,
 				F5710C081FB460E700430F44 /* LaunchScreen.storyboard in Resources */,
 				F5710C051FB460E700430F44 /* Assets.xcassets in Resources */,
 				F5710C1E1FB4620000430F44 /* ChatMessageCell.xib in Resources */,
@@ -193,15 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5127EF81FBF376800FA1843 /* TextInputView.swift in Sources */,
 				F5710C121FB461A600430F44 /* Message.swift in Sources */,
-				F5710C201FB4620000430F44 /* ChatInputView.swift in Sources */,
 				F5710C281FB4645B00430F44 /* Utils.swift in Sources */,
-				F5710C221FB4620000430F44 /* ChatKeyboardManager.swift in Sources */,
 				F5710C001FB460E700430F44 /* ViewController.swift in Sources */,
 				F5710C1F1FB4620000430F44 /* ChatCollectionView.swift in Sources */,
 				F5710C1D1FB4620000430F44 /* ChatMessageCell.swift in Sources */,
 				F5710C241FB4623100430F44 /* ChatMessageDataSource.swift in Sources */,
 				F5710BFE1FB460E700430F44 /* AppDelegate.swift in Sources */,
+				F5E9712E1FB9F159006125F3 /* FloatingInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
