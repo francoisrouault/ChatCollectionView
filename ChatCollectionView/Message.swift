@@ -12,12 +12,15 @@ import UIKit
 class Message: ChatMessageDataSource, CustomStringConvertible {
     
     enum From {
+        case sLive
         case platform1(String)
         case platform2(String)
         case user
         
         var color: UIColor {
             switch self {
+            case .sLive:
+                return UIColor.firekast
             case .platform1:
                 return UIColor.red
             case .platform2:
@@ -29,6 +32,8 @@ class Message: ChatMessageDataSource, CustomStringConvertible {
         
         var author: String {
             switch self {
+            case .sLive:
+                return "sLive"
             case .platform1(let author):
                 return author
             case .platform2(let author):

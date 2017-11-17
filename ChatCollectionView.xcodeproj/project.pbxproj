@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F5127EF81FBF376800FA1843 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127EF71FBF376800FA1843 /* TextInputView.swift */; };
+		F5127EFC1FBF434800FA1843 /* LoginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5127EFA1FBF434800FA1843 /* LoginInputView.xib */; };
+		F5127EFD1FBF434800FA1843 /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127EFB1FBF434800FA1843 /* LoginInputView.swift */; };
+		F5127F011FBF446C00FA1843 /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127EFE1FBF446B00FA1843 /* ChatBot.swift */; };
+		F5127F021FBF446C00FA1843 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127EFF1FBF446B00FA1843 /* PermissionsManager.swift */; };
+		F5127F031FBF446C00FA1843 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127F001FBF446B00FA1843 /* User.swift */; };
+		F5127F071FBF463500FA1843 /* CreateAppInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5127F051FBF463500FA1843 /* CreateAppInputView.swift */; };
+		F5127F081FBF463500FA1843 /* CreateAppInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5127F061FBF463500FA1843 /* CreateAppInputView.xib */; };
 		F5710BFE1FB460E700430F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710BFD1FB460E700430F44 /* AppDelegate.swift */; };
 		F5710C001FB460E700430F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5710BFF1FB460E700430F44 /* ViewController.swift */; };
 		F5710C031FB460E700430F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5710C011FB460E700430F44 /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 
 /* Begin PBXFileReference section */
 		F5127EF71FBF376800FA1843 /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		F5127EFA1FBF434800FA1843 /* LoginInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginInputView.xib; sourceTree = "<group>"; };
+		F5127EFB1FBF434800FA1843 /* LoginInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInputView.swift; sourceTree = "<group>"; };
+		F5127EFE1FBF446B00FA1843 /* ChatBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
+		F5127EFF1FBF446B00FA1843 /* PermissionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
+		F5127F001FBF446B00FA1843 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F5127F051FBF463500FA1843 /* CreateAppInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAppInputView.swift; sourceTree = "<group>"; };
+		F5127F061FBF463500FA1843 /* CreateAppInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAppInputView.xib; sourceTree = "<group>"; };
 		F5710BFA1FB460E700430F44 /* ChatCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5710BFD1FB460E700430F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5710BFF1FB460E700430F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +74,28 @@
 			children = (
 				F5E9712D1FB9F159006125F3 /* FloatingInputView.swift */,
 				F5710C191FB4620000430F44 /* TextView */,
+				F5127EF91FBF432D00FA1843 /* Login */,
+				F5127F041FBF457D00FA1843 /* Create App */,
 			);
 			path = Input;
+			sourceTree = "<group>";
+		};
+		F5127EF91FBF432D00FA1843 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F5127EFB1FBF434800FA1843 /* LoginInputView.swift */,
+				F5127EFA1FBF434800FA1843 /* LoginInputView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F5127F041FBF457D00FA1843 /* Create App */ = {
+			isa = PBXGroup;
+			children = (
+				F5127F051FBF463500FA1843 /* CreateAppInputView.swift */,
+				F5127F061FBF463500FA1843 /* CreateAppInputView.xib */,
+			);
+			path = "Create App";
 			sourceTree = "<group>";
 		};
 		F5710BF11FB460E700430F44 = {
@@ -86,9 +120,12 @@
 			children = (
 				F5127EF61FBF2D5C00FA1843 /* Input */,
 				F5710C141FB4620000430F44 /* Chat */,
-				F5710C101FB461A600430F44 /* Message.swift */,
 				F5710BFD1FB460E700430F44 /* AppDelegate.swift */,
 				F5710BFF1FB460E700430F44 /* ViewController.swift */,
+				F5710C101FB461A600430F44 /* Message.swift */,
+				F5127F001FBF446B00FA1843 /* User.swift */,
+				F5127EFE1FBF446B00FA1843 /* ChatBot.swift */,
+				F5127EFF1FBF446B00FA1843 /* PermissionsManager.swift */,
 				F5710C271FB4645B00430F44 /* Utils.swift */,
 				F5710C011FB460E700430F44 /* Main.storyboard */,
 				F5710C041FB460E700430F44 /* Assets.xcassets */,
@@ -185,12 +222,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5127EFC1FBF434800FA1843 /* LoginInputView.xib in Resources */,
 				F5710C311FB4925B00430F44 /* README.md in Resources */,
 				F5710C211FB4620000430F44 /* TextInputView.xib in Resources */,
 				F5710C081FB460E700430F44 /* LaunchScreen.storyboard in Resources */,
 				F5710C051FB460E700430F44 /* Assets.xcassets in Resources */,
 				F5710C1E1FB4620000430F44 /* ChatMessageCell.xib in Resources */,
 				F5710C031FB460E700430F44 /* Main.storyboard in Resources */,
+				F5127F081FBF463500FA1843 /* CreateAppInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,13 +240,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5127F031FBF446C00FA1843 /* User.swift in Sources */,
 				F5127EF81FBF376800FA1843 /* TextInputView.swift in Sources */,
 				F5710C121FB461A600430F44 /* Message.swift in Sources */,
+				F5127F021FBF446C00FA1843 /* PermissionsManager.swift in Sources */,
 				F5710C281FB4645B00430F44 /* Utils.swift in Sources */,
 				F5710C001FB460E700430F44 /* ViewController.swift in Sources */,
 				F5710C1F1FB4620000430F44 /* ChatCollectionView.swift in Sources */,
+				F5127F011FBF446C00FA1843 /* ChatBot.swift in Sources */,
 				F5710C1D1FB4620000430F44 /* ChatMessageCell.swift in Sources */,
 				F5710C241FB4623100430F44 /* ChatMessageDataSource.swift in Sources */,
+				F5127EFD1FBF434800FA1843 /* LoginInputView.swift in Sources */,
+				F5127F071FBF463500FA1843 /* CreateAppInputView.swift in Sources */,
 				F5710BFE1FB460E700430F44 /* AppDelegate.swift in Sources */,
 				F5E9712E1FB9F159006125F3 /* FloatingInputView.swift in Sources */,
 			);

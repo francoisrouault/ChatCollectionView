@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: ChatCollectionView!
     @IBOutlet weak var buttonNewMessage: UIButton!
     
+    var chatBot: ChatBot!
+    
     func createMessageText() -> String {
         let choice = arc4random_uniform(UInt32(50-1)) % 50
         let maxCount: Int
@@ -32,6 +34,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        chatBot = ChatBot(viewController: self, collectionView: collectionView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    @objc func appWillEnterForeground() {
+        chatBot?.checkPermissions()
     }
     
     @IBAction func clickNewMessage(_ sender: UIButton) {

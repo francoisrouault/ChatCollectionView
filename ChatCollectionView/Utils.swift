@@ -26,12 +26,27 @@ extension UIColor {
 }
 
 extension UIView {
-    
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
     }
-    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.4
+        let ratio = 0.4
+        animation.values = [-20.0 * ratio, 20.0 * ratio, -20.0 * ratio, 20.0 * ratio, -10.0 * ratio, 10.0 * ratio, -5.0 * ratio, 5.0 * ratio, 0.0 * ratio]
+        layer.add(animation, forKey: "shake")
+    }
 }
+
+extension String {
+    var isEmailAddress: Bool  {
+        let emailRegex = ".+@([A-Za-z0-9]+\\.)+[A-Za-z]{2}[A-Za-z]*"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+        return emailTest.evaluate(with: self)
+    }
+}
+
